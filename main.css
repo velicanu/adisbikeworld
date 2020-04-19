@@ -1,4 +1,4 @@
-body {
+zbody {
   padding-top: 5rem;
   padding: 0;
   margin: 0;
@@ -26,4 +26,24 @@ body {
 }
 .navbar-collapse {
   justify-content: flex-end;
+}
+.navbar-toggler {
+  width: 47px;
+  height: 34px;
+  background-color: #228b23;
+  border: none;
+}
+.navbar-toggler .line {
+  width: 100%;
+  float: left;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+.navbar-custom {
+    color: #FFFFFF;
+    background-color: #CC3333;
+}
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;..");
 }

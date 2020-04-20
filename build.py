@@ -1,4 +1,5 @@
 import os
+import tempfile
 from logging import getLogger
 
 log = getLogger(__name__)
@@ -28,3 +29,8 @@ for html_filename in html_files:
     with open(os.path.join(script_dir, html_filename), "w") as output_html_file:
         log.info(f"Generating {html_filename}")
         output_html_file.write(html_string)
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmp_filename = os.path.join(tmpdir, html_filename)
+        os.system(f"prettier {html_filename} > {tmp_filename}")
+        os.system(f"mv {tmp_filename} {html_filename}")

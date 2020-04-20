@@ -1,5 +1,5 @@
 import os
-import tempfile
+import subprocess
 from logging import getLogger
 
 log = getLogger(__name__)
@@ -30,7 +30,6 @@ for html_filename in html_files:
         log.info(f"Generating {html_filename}")
         output_html_file.write(html_string)
 
-    with tempfile.TemporaryDirectory() as tmpdir:
-        tmp_filename = os.path.join(tmpdir, html_filename)
-        os.system(f"prettier {html_filename} > {tmp_filename}")
-        os.system(f"mv {tmp_filename} {html_filename}")
+
+# for some reason it's much faster this way than doing it in python
+subprocess.run("./prettier.sh")

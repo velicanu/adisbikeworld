@@ -6,4 +6,3 @@ deploy:
 
 clean:
 	rm *.html
-

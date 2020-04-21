@@ -2,8 +2,9 @@
 
 ## Prerequisites
 
-- python
+- python3
 - bash
+- prettier (https://prettier.io/docs/en/install.html)
 
 ## Build
 

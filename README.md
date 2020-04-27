@@ -13,3 +13,7 @@ Run `make` to generate all the html files from the templates.
 ## Source files
 
 Edit the html files in the `templates` directory and run make so that common components are inserted into each file, eg. header, navbar, scripts.
+
+## Deploy
+
+Run `make deploy` to upload to the sftp server. It will ask you to enter the password.

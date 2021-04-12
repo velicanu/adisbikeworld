@@ -1,5 +1,4 @@
 import os
-import subprocess
 from logging import getLogger
 
 log = getLogger(__name__)
@@ -33,7 +32,3 @@ for html_filename in html_files:
     with open(os.path.join(script_dir, html_filename), "w") as output_html_file:
         log.info(f"Generating {html_filename}")
         output_html_file.write(html_string)
-
-
-# for some reason it's much faster this way than doing it in python
-subprocess.run("./prettier.sh")

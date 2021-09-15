@@ -3,13 +3,13 @@ build:
 
 deploy:
 	./prettier.sh
-	sftp aurelvelicanu-001@FTP.SITE4NOW.NET < deploy-html-only.sftp
+	lftp ftp://aurelvelicanu-001@FTP.SITE4NOW.NET -e "set ssl:verify-certificate false;cd adisbikeworld ; mput *.html ; quit"
 
 pretty:
 	./prettier.sh
 
 deploy-all:
-	sftp aurelvelicanu-001@FTP.SITE4NOW.NET < deploy-all.sftp
+	lftp ftp://aurelvelicanu-001@FTP.SITE4NOW.NET -e "set ssl:verify-certificate false;cd adisbikeworld ; mput * ; quit"
 
 clean:
 	rm *.html

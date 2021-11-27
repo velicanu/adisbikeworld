@@ -1,3 +1,13 @@
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 zbody {
   padding-top: 5rem;
   padding: 0;

@@ -2,7 +2,7 @@ build:
 	python build.py
 
 deploy:
-	./prettier.sh
+	# ./prettier.sh
 	lftp -u "$(ADISBIKEWORLD_USER),$(ADISBIKEWORLD_PASS)" ftp://win5186.site4now.net -e "set ssl:verify-certificate false;cd adisbikeworld ; mput *.html ; quit"
 
 pretty:

@@ -19,7 +19,7 @@ jobs:
         id: py
         with:
           python-version: "3.12"
-      - name: make
-        run: make
-      - name: make
+      - name: install
+        run: apt-get install -y lftp
+      - name: deploy
         run: make deploy

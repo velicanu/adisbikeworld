@@ -1,0 +1,24 @@
+name: tests
+
+on:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up python
+        uses: actions/setup-python@v4
+        id: py
+        with:
+          python-version: "3.12"
+      - name: make
+        run: make
+      - name: make
+        run: make deploy

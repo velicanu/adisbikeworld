@@ -25,3 +25,6 @@ jobs:
         run: make build
       - name: deploy
         run: make deploy
+        env:
+          ADISBIKEWORLD_USER: ${{ secrets.ADISBIKEWORLD_USER }}
+          ADISBIKEWORLD_PASS: ${{ secrets.ADISBIKEWORLD_PASS }}

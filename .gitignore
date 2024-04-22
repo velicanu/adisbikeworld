@@ -3,3 +3,4 @@ package-lock.json
 /*.html
 venv
 .direnv
+.DS_Store

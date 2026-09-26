@@ -57,3 +57,9 @@ zbody {
 .navbar-custom .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;..");
 }
+.ebike-thumb {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}

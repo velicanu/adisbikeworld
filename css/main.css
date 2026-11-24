@@ -63,3 +63,59 @@ zbody {
   object-fit: cover;
   border-radius: 0.25rem;
 }
+
+.bf-sale {
+  background: #d00000;
+  color: #fff;
+  border: 6px solid #ffd400;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+  animation: bf-flash 1s steps(1, end) infinite;
+}
+.bf-sale-title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  text-shadow: 3px 3px 0 #000;
+}
+.bf-sale-sub {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffd400;
+}
+.bf-sale-gifts {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.bf-strip {
+  color: #d00000;
+}
+@keyframes bf-flash {
+  0% {
+    background: #d00000;
+    border-color: #ffd400;
+  }
+  50% {
+    background: #ff3b3b;
+    border-color: #fff;
+  }
+}
+@media (max-width: 576px) {
+  .bf-sale-title {
+    font-size: 2.4rem;
+  }
+  .bf-sale-sub {
+    font-size: 1.5rem;
+  }
+  .bf-sale-gifts {
+    font-size: 1.1rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bf-sale {
+    animation: none;
+  }
+}
